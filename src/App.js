@@ -26,7 +26,8 @@ function App() {
 
       setSearchEmpty(true)
     }
- 
+//  Things to fix, the captialization of the search and the captialization of the names. Fix for card display, Fix for component searching.
+// Fix for secondary typing search
 return (
     <div className="App">
       <div className='box'>
