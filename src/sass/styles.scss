@@ -1,6 +1,8 @@
 @import "colors";
-
+@import "positioning"; //Trying to import the mixin file
 
 .box{
+    @include center;
+    position: absolute;
     background-color: $backgroundprimary;
 }
