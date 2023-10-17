@@ -14,14 +14,18 @@ function App() {
     attack: '',
     type:'',
   })
+  
+  // A use State to see if anything is being searched
+  const [searchEmpty, setSearchEmpty]= useState(false)
 
   // Function for the button.
   const searchFunction =()=>{
     Axios.get(`${base_URL}/${pokemonName}`).then((response)=>
       setPokemonInfo({name: pokemonName, img: response.data.sprites.front_default, hp: response.data.stats[0].base_stat,
       attack: response.data.stats[1].base_stat, type:response.data.types[0].type.name}))
-  }
-  // stats: response.data.stats.name
+
+      setSearchEmpty(true)
+    }
  
 return (
     <div className="App">
@@ -31,12 +35,13 @@ return (
         <button onClick={searchFunction}>Search</button>
       </div>
       {/* <Display/> */}
-      <div>
-        <h1>{pokemonInfo.name}</h1>
+      <div>{!searchEmpty ?(<h1>Nothing is chosen</h1>) :(<> <h1>{pokemonInfo.name}</h1>
         <h2>{pokemonInfo.hp}</h2>
         <h2>{pokemonInfo.attack}</h2>
         <img src={pokemonInfo.img} alt='Pokemon image'/>
-        <h2>{pokemonInfo.type}</h2>
+        <h2>{pokemonInfo.type}</h2></>
+        )}
+       
       </div>
     </div>
   );
