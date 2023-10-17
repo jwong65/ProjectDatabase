@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import '../sass/style.css'
 
 export default function Display() {
     
@@ -15,7 +16,7 @@ const fetchInfo =() =>{
   })
 }
   return (
-    <div>Display
+    <div className='display'>Display
     <button onClick={fetchInfo}> Test Fetch</button>
     <pre>
     {JSON.stringify(pokedata, null, 2)}</pre>
