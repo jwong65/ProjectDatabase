@@ -3,11 +3,13 @@
 
 .box{
     @include center;
+    @include roundedevenly;
     position: absolute;
     background-color: $backgroundprimary;
+    border: 1px solid $bordercolor;
+
 }
 .display{
-    @include center;
     border: 1px solid black;
     background-color: antiquewhite;
 }
