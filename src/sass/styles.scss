@@ -6,6 +6,10 @@
     position: absolute;
     background-color: $backgroundprimary;
 }
+.display{
+    @include center;
+    background-color: antiquewhite;
+}
 form{
     position: absolute;
     top:60%;

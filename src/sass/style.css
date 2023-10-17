@@ -7,6 +7,14 @@
   background-color: #c8d6af;
 }
 
+.display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: antiquewhite;
+}
+
 form {
   position: absolute;
   top: 60%;
