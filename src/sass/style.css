@@ -3,16 +3,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  position: absolute;
+  border-radius: 25px;
+  padding: 20px;
   background-color: #c8d6af;
+  border: 1px solid #f3ca40;
 }
 
 .display {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-50%, -50%);
   border: 1px solid black;
   background-color: antiquewhite;
 }
