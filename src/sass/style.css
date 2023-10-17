@@ -7,4 +7,10 @@
   background-color: #c8d6af;
 }
 
+form {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+}
+
 /*# sourceMappingURL=style.css.map */
