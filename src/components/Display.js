@@ -10,7 +10,7 @@ const [pokemonName, setName]= useState()
 
 const fetchInfo =() =>{
     console.log(`${base_URL}/${pokemonName}`)
-  fetch(`${base_URL}/${pokemonName}`)
+  fetch(`${base_URL}/${pokemonName}?limit=2offset=10`)
   .then((res)=>res.json())
   .then((json)=> {
     console.log(json)
@@ -29,8 +29,8 @@ const handleSubmit = (e)=>{
             <input type='submit' value='Submit'></input>
         </form>
     {/* <button onClick={fetchInfo}> Test Fetch</button> */}
-    <pre>
-    {JSON.stringify(pokedata, null, 1)}</pre>
+    {<pre>
+    {JSON.stringify(pokedata, null, 2)}</pre>}
     </div>
   )
 }
